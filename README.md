@@ -29,13 +29,25 @@
 
 ## 1. Получите токен
 
-Панель управления → раздел **«API и Terraform»** → выпустите API-токен.
+Панель управления → раздел **[«API и Terraform»](https://timeweb.cloud/my/api-keys)** → выпустите API-токен.
 
 Токен действует от имени вашего аккаунта в объёме прав, выданных ключу. Если хотите ограничить, что
 сможет делать модель, выпустите **отдельный ключ с урезанными правами** — сервер учитывает права ключа
 и вернёт ошибку на запрещённые категории.
 
 ## 2. Подключите клиент
+
+### В один клик
+
+Для клиентов с поддержкой MCP-deeplink подключение укладывается в нажатие кнопки. Клиент откроется, попросит токен из шага 1 и сам сохранит конфиг.
+
+[![Установить в VS Code](https://img.shields.io/badge/VS_Code-Установить-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode:mcp/install?%7B%22name%22%3A%22timeweb-cloud%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A//api.timeweb.cloud/api/v1/mcp/search%22%2C%22inputs%22%3A%5B%7B%22id%22%3A%22timeweb_token%22%2C%22type%22%3A%22promptString%22%2C%22password%22%3Atrue%2C%22description%22%3A%22API-%5Cu0442%5Cu043e%5Cu043a%5Cu0435%5Cu043d%20Timeweb%20Cloud%20%28%5Cu043f%5Cu0430%5Cu043d%5Cu0435%5Cu043b%5Cu044c%20%5Cu0443%5Cu043f%5Cu0440%5Cu0430%5Cu0432%5Cu043b%5Cu0435%5Cu043d%5Cu0438%5Cu044f%20%5Cu2192%20API%20%5Cu0438%20Terraform%29%22%7D%5D%2C%22headers%22%3A%7B%22Authorization%22%3A%22Bearer%20%24%7Binput%3Atimeweb_token%7D%22%7D%7D)
+[![Установить в VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Установить-24bfa5?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders:mcp/install?%7B%22name%22%3A%22timeweb-cloud%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A//api.timeweb.cloud/api/v1/mcp/search%22%2C%22inputs%22%3A%5B%7B%22id%22%3A%22timeweb_token%22%2C%22type%22%3A%22promptString%22%2C%22password%22%3Atrue%2C%22description%22%3A%22API-%5Cu0442%5Cu043e%5Cu043a%5Cu0435%5Cu043d%20Timeweb%20Cloud%20%28%5Cu043f%5Cu0430%5Cu043d%5Cu0435%5Cu043b%5Cu044c%20%5Cu0443%5Cu043f%5Cu0440%5Cu0430%5Cu0432%5Cu043b%5Cu0435%5Cu043d%5Cu0438%5Cu044f%20%5Cu2192%20API%20%5Cu0438%20Terraform%29%22%7D%5D%2C%22headers%22%3A%7B%22Authorization%22%3A%22Bearer%20%24%7Binput%3Atimeweb_token%7D%22%7D%7D)
+[![Установить в Cursor](https://img.shields.io/badge/Cursor-Установить-000000?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com/install-mcp?name=timeweb-cloud&config=eyJ1cmwiOiJodHRwczovL2FwaS50aW1ld2ViLmNsb3VkL2FwaS92MS9tY3Avc2VhcmNoIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyIEFQSV9LRVlfSEVSRSJ9fQ)
+
+VS Code спросит токен в защищённом поле и подставит его в заголовок `Authorization`. Кнопка для Cursor подставит плейсхолдер `API_KEY_HERE` — замените его на свой токен в форме, которую откроет Cursor.
+
+Для Claude Code, Claude Desktop, Windsurf, Zed и других клиентов автоподключения пока нет — там нужен ручной конфиг ниже.
 
 ### Claude Code
 
